@@ -1,0 +1,52 @@
+
+.search {
+    position: relative;
+}
+
+.search-icon .glyphicon {
+    left: 0px;
+}
+
+.search-icon input {
+    padding-left: 30px;
+}
+
+.search .glyphicon {
+    position: absolute;
+    padding: 10px;
+    padding-right: 10px;
+    pointer-events: none;
+    color: gray;
+}
+
+.item {
+    padding: 0.5em;
+    display: flex;
+}
+
+.email {
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.img-container {
+    margin-right: 15px;
+}
+
+textarea {
+    resize: none;
+}
+
+.container.app {
+    max-width: 750px;
+    margin-top: 20px;
+}
+
+.comment {
+    color: #7f919e;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

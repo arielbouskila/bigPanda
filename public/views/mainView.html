@@ -1,0 +1,39 @@
+<div class="container app">
+
+
+    <div class="row well">
+        <form class="form-group" name="form" novalidate>
+            <input type="email" placeholder="Email" ng-model="main.email" class="form-control" ng-required="true" ng-pattern="main.emailFormat" />
+            <br/>
+            <textarea ng-model="main.comment" class="form-control" class="span6" rows="3" ng-required="true" placeholder="Message"></textarea>
+            <div class="btn pull-right">
+                <button type="submit" class="btn pull-right btn-primary" ng-disabled="form.$invalid" ng-click="!form.$invalid && main.save();" />SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+<div class="feed-container">
+    <div class="search search-icon">
+         <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Filter" ng-model="main.searchText" />
+       
+    </div>
+    
+    <div ng-repeat="commentItem in main.comments | filter:main.searchText" class="row feed">
+        <div class="item">
+            <div class="img-container">
+                <img ng-src="{{commentItem.url}}" class="img-rounded" />
+            </div>
+            <div class="info-container">
+            <div class="email">
+                <label class="lblEmail"> {{commentItem.email}}</label>
+            </div>
+            <div class="comment">
+                <div class="lblComment">{{commentItem.comment}}</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
