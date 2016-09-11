@@ -1,5 +1,7 @@
-Hello 
-Installation for the assignment: 
-1. please run npm install
+## Installation for the assignment: 
+```
+1. npm install
 2. bower install
-3.go to this url : http://localhost:8080
+3. node server
+4. Go to this url : http://localhost:8080
+```
